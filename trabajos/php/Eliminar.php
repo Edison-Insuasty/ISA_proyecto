@@ -4,35 +4,23 @@
 
 	$codigo   = $_POST["codigo"];
 
-	$consulta = "SELECT *
-				 FROM estudiante
-				 WHERE CodigoEstudiante = '$codigo' ";
+	$consulta = "SELECT * FROM estudiante WHERE CodigoEstudiante = '$codigo' ";
 	$consulta = mysqli_query($conexion, $consulta);
 	$consulta = mysqli_fetch_array($consulta);
 
 	$c = $consulta['Cedula'];
 
-	$consulta1 = "SELECT Cedula
-				 FROM persona
-				 WHERE Cedula = (SELECT Cedula
-				 FROM estudiante
-				 WHERE CodigoEstudiante = '$codigo') ";
+	$consulta1 = "SELECT Cedula FROM persona WHERE Cedula = (SELECT Cedula FROM estudiante WHERE CodigoEstudiante = '$codigo') ";
 	$consulta1 = mysqli_query($conexion, $consulta1);
 	$consulta1 = mysqli_fetch_array($consulta1);
 
-	$consulta2 = "SELECT *
-				 FROM docente
-				 WHERE CodigoDocente = '$codigo' ";
+	$consulta2 = "SELECT * FROM docente WHERE CodigoDocente = '$codigo' ";
 	$consulta2 = mysqli_query($conexion, $consulta2);
 	$consulta2 = mysqli_fetch_array($consulta2);
 
 	$c1 = $consulta2['Cedula'];
 
-	$consulta3 = "SELECT Cedula
-				 FROM persona
-				 WHERE Cedula = (SELECT Cedula
-				 FROM docente
-				 WHERE CodigoDocente = '$codigo') ";
+	$consulta3 = "SELECT Cedula FROM persona WHERE Cedula = (SELECT Cedula FROM docente WHERE CodigoDocente = '$codigo') ";
 	$consulta3 = mysqli_query($conexion, $consulta3);
 	$consulta3 = mysqli_fetch_array($consulta3);
 
@@ -56,7 +44,6 @@
 		$consu1 = mysqli_query($conexion, $eliminar1);
 
 		echo '<script language="javascript">alert("Cuenta Eliminada.");window.location.href="../perfiladministrador.php"</script>';
-
 	}else if($consulta2 && $consulta3){
 
 		$eliminar8 = "DELETE FROM numeroasesorias WHERE CodigoDocente = '$codigo' ";
@@ -84,9 +71,7 @@
 		$consu8 = mysqli_query($conexion, $eliminar8);
 
 		echo '<script language="javascript">alert("Cuenta Eliminada.");window.location.href="../perfiladministrador.php"</script>';
-
 	}else if($consulta4){
-
 
 		$consulta7 = " SELECT idTrabajo FROM trabajo WHERE CodigoEstudiante = '$_SESSION[codigoestudiante]' ";
 		$consulta7 = mysqli_query($conexion, $consulta7);
@@ -119,17 +104,13 @@
 					}else{
 						echo "Error" . $sql3 . "<br>" . mysqli_error($conexion);
 					}
-
 				}
 
-				
 				$eliminar10 = "DELETE FROM comentario WHERE idTrabajo = '$consulta7[idTrabajo]' ";
 				$consu10 = mysqli_query($conexion, $eliminar10);
 
 				$eliminar12 = "DELETE FROM asignaasesor WHERE idTrabajo = '$consulta7[idTrabajo]' ";
 				$consu12 = mysqli_query($conexion, $eliminar12);
-
-				
 			}
 
 			$consulta10 = " SELECT idTrabajo FROM asignajurado WHERE idTrabajo = '$consulta7[idTrabajo]' ";
@@ -157,7 +138,6 @@
 					}else{
 						echo "Error" . $sql4 . "<br>" . mysqli_error($conexion);
 					}
-
 				}
 
 				$eliminar9 = "DELETE FROM calificacion WHERE idTrabajo = '$consulta7[idTrabajo]' ";
@@ -165,7 +145,6 @@
 
 				$eliminar11 = "DELETE FROM asignajurado WHERE idTrabajo = '$consulta7[idTrabajo]' ";
 				$consu11 = mysqli_query($conexion, $eliminar11);
-
 			}
 
 			$s="SELECT NombreTrabajo FROM trabajo WHERE CodigoEstudiante = '$_SESSION[codigoestudiante]' ";
@@ -184,9 +163,6 @@
 		}else{
 			echo '<script language="javascript">alert("Aun no registra trabajo.");window.location.href="../perfilestudiante.php"</script>';
 		}
-
-		
-		
 	}else if($consulta8) {
 
 		if($codigo != $consulta && $codigo != $consulta2 ){
