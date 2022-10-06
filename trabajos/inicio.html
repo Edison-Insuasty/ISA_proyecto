@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inicio Sesión</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <br>
+    <div class="row h-100 justify-content-center align-items-center ">
+        <div class="card col-10 border-black" style="background-color: #F0F2EE;" >
+            <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example  p-3 rounded-2 text-black" tabindex="0">
+                <div class="card-group" align="center">
+                    <div class="card bg-transparent" style="width: 18rem;">
+                        <div class="card-body">
+                            <div class="alert alert-success border-dark text-black" role="alert">
+                                INICIO DE SESIÓN
+                            </div>
+                            <form class="row g-3" name="contacto" method="POST" action="php/IniciarSesion.php">
+                                <table class="table table-success table-striped">
+                                    <tr align="center" valign="middle">
+                                        <td>
+                                            Codigo:
+                                        </td>
+                                        <td>
+                                            <input type="text" name="codigo" placeholder="Ingrese codigo" class="form-control" id="validationDefault05" required>
+                                        </td>
+                                        <td>
+                                            Contraseña:
+                                        </td>
+                                        <td>
+                                            <input type="password" name="contraseña" autocomplete="new-password" placeholder="Ingrese contraseña" class="form-control" id="validationDefault05" required>
+                                        </td>
+                                    </tr>
+                                    <tr align="center" valign="middle">
+                                        <td colspan="4">
+                                            <button class="btn btn-success border-dark" name="enviar">Iniciar Sesion</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <a href="index.html" class="btn btn-danger border-dark text-white">Volver</a>
+            </div>
+        </div>
+    </div>
+    <br>
+</body>
+</html>
