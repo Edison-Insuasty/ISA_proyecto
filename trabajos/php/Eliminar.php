@@ -177,4 +177,5 @@
 			echo '<script language="javascript">alert("Cuenta Eliminada.");window.location.href="../index.html"</script>';
 		}
 	}
+	
 ?>
