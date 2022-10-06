@@ -15,7 +15,7 @@
 	$codigoestudiante = $_SESSION[codigoestudiante];
 	$nombreproyecto   = $_POST["nombreproyecto"];
 
-	$consultaId       = "SELECT CodigoEstudiante
+	$consultaId       = "SELECT CodigoEstudiante   
 				         FROM trabajo
 				         WHERE CodigoEstudiante = '$codigoestudiante' ";
 	$consultaId       = mysqli_query($conexion, $consultaId);
