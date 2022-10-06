@@ -2,10 +2,7 @@
 	include("Conexion.php");
   	include("validarSesion.php");
 
-  	$consulta  = "SELECT idComentario
-				  FROM comentario
-				  ORDER BY idComentario DESC
-				  LIMIT 1";
+  	$consulta  = "SELECT idComentario FROM comentario ORDER BY idComentario DESC LIMIT 1";
 	$consulta  = mysqli_query($conexion, $consulta);
 	$consulta  = mysqli_fetch_array($consulta);
 	$idComentario = $consulta['idComentario'];
@@ -17,6 +14,7 @@
 	$comentar = $_POST['comentar'];
 
 	$sql = "INSERT INTO comentario VALUES ('$idComentario', '$codigodocente', '$idtrabajo', '$comentar')";
+	
 	if(mysqli_query($conexion, $sql)){
 		echo '<script language="javascript">alert("Comentario realizado.");window.location.href="../perfildocente.php"</script>';
 	}else{
