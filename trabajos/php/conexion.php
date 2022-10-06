@@ -10,4 +10,5 @@
 		echo '<script language="javascript">alert("Fallo la conexion.");window.location.href="../perfiladministrador.php"</script>';
 		die("connection failed: " . mysqli_connect_error());
 	}
+	
 ?>
