@@ -10,20 +10,13 @@
 	$consu = mysqli_fetch_array($consu);
 
 	if(password_verify($password, $consu['Password'])){
-		
-
 		$consulta = " SELECT Nota FROM calificacion WHERE idTrabajo = (SELECT idTrabajo FROM trabajo WHERE CodigoEstudiante = '$_SESSION[codigoestudiante]' ) ";
 		$consulta = mysqli_query($conexion, $consulta);
 		$consulta = mysqli_fetch_array($consulta);
 
-		
-
-		
-
 		if($consulta){
 			echo '<script language="javascript">alert("El proyecto ya fue Calificado.");window.location.href="../perfilestudiante.php"</script>';
 		}else{
-
 			$s="SELECT NombreTrabajo FROM trabajo WHERE CodigoEstudiante = '$_SESSION[codigoestudiante]' ";
 			$s = mysqli_query($conexion, $s);
 			$s = mysqli_fetch_array($s);
@@ -38,11 +31,7 @@
 
 			if(move_uploaded_file($archivo, "../$ubicacion")){
 
-				$sql = "UPDATE trabajo SET NombreTrabajo='$nombreproyecto', ubicacion='$ubicacion' WHERE CodigoEstudiante = '$_SESSION[codigoestudiante]' ";
-
-				//unlink($archivo);
-
-				
+				$sql = "UPDATE trabajo SET NombreTrabajo='$nombreproyecto', ubicacion='$ubicacion' WHERE CodigoEstudiante = '$_SESSION[codigoestudiante]' ";				
 
 				if(mysqli_query($conexion, $sql)) {
 					echo '<script language="javascript">alert("Proyecto Modificado.");window.location.href="../perfilestudiante.php"</script>';
@@ -52,9 +41,6 @@
 				}
 			}
 		}
-
-			
-
 	}else{
 		echo '<script language="javascript">alert("Contraseña incorrecta.");window.location.href="../perfilestudiante.php"</script>';
 	}
