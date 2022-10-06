@@ -2,10 +2,7 @@
 	include("Conexion.php");
   	include("validarSesion.php");
 
-  	$consulta  = "SELECT idCalificacion
-				  FROM calificacion
-				  ORDER BY idCalificacion DESC
-				  LIMIT 1";
+  	$consulta  = "SELECT idCalificacion FROM calificacion ORDER BY idCalificacion DESC LIMIT 1";
 	$consulta  = mysqli_query($conexion, $consulta);
 	$consulta  = mysqli_fetch_array($consulta);
 	$idCalificacion = $consulta['idCalificacion'];
@@ -38,5 +35,4 @@
 	}else{
 		echo '<script language="javascript">alert("El Trabajo ya esta calificado.");window.location.href="../perfildocente.php"</script>';
 	}
-
 ?>
