@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-09-2022 a las 00:02:09
+-- Tiempo de generación: 01-10-2022 a las 23:53:38
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 5.6.39
 
@@ -41,7 +41,7 @@ CREATE TABLE `administrador` (
 --
 
 INSERT INTO `administrador` (`CodigoAdministrador`, `Cedula`, `Credencial`, `Cargo`, `Password`) VALUES
-('000', '000', '111', 'secretario', '$2y$10$7z8g0MOOAV.WqSYziXebZuyy72ogtlP5wLc.HfxuNbChst5dzwI6.');
+('000', '000', '111', 'secretario', '$2y$10$BkXVDwWrmob/ZOIADHy6ke0cdP7h8MTtKXUHj1z/fGlsC9dtdNhpu');
 
 -- --------------------------------------------------------
 
@@ -60,9 +60,8 @@ CREATE TABLE `asignaasesor` (
 --
 
 INSERT INTO `asignaasesor` (`idAsesor`, `CodigoDocente`, `idTrabajo`) VALUES
-(1, '201', 1),
-(3, '202', 3),
-(4, '203', 4);
+(1, '200', 1),
+(2, '200', 2);
 
 -- --------------------------------------------------------
 
@@ -81,9 +80,8 @@ CREATE TABLE `asignajurado` (
 --
 
 INSERT INTO `asignajurado` (`idJurado`, `CodigoDocente`, `idTrabajo`) VALUES
-(4, '202', 1),
-(2, '204', 3),
-(1, '204', 4);
+(1, '200', 1),
+(2, '201', 2);
 
 -- --------------------------------------------------------
 
@@ -104,9 +102,8 @@ CREATE TABLE `calificacion` (
 --
 
 INSERT INTO `calificacion` (`idCalificacion`, `CodigoDocente`, `idTrabajo`, `Nota`, `Estado`) VALUES
-(1, '202', 1, '35', 'Aprobado'),
-(3, '204', 3, '44', 'Aprobado'),
-(4, '204', 4, '22', 'Reprobado');
+(1, '200', 1, '45', 'Aprobado'),
+(2, '201', 2, '25', 'Reprobado');
 
 -- --------------------------------------------------------
 
@@ -126,12 +123,10 @@ CREATE TABLE `comentario` (
 --
 
 INSERT INTO `comentario` (`idComentario`, `CodigoDocente`, `idTrabajo`, `Mensaje`) VALUES
-(3, '202', 3, 'bien hecho'),
-(4, '202', 3, 'bien hecho'),
-(5, '202', 3, 'bien hecho'),
-(6, '202', 3, 'mal realizado'),
-(7, '203', 4, 'excellente'),
-(8, '203', 4, 'bien hecho');
+(1, '200', 1, 'bien hecho'),
+(2, '200', 1, 'excellente'),
+(3, '201', 2, 'mal realizado'),
+(4, '201', 2, 'ya corrigiÃ³ ');
 
 -- --------------------------------------------------------
 
@@ -151,10 +146,8 @@ CREATE TABLE `docente` (
 --
 
 INSERT INTO `docente` (`CodigoDocente`, `Cedula`, `Especializacion`, `Password`) VALUES
-('201', '201', 'ingenierÃ­a de sistemas', '$2y$10$vkOaK1xJChD16bK83Z9d0O2m.quAMbemJvErh9NZBg1.tcipujb.m'),
-('202', '202', 'administrador', '$2y$10$rGZBW2EAAws.AEcXhI.AXuGV7ib6UfIz3aouOjPqPbexB1A0UK3kq'),
-('203', '203', 'ingeniero civil', '$2y$10$VGEJlOGEYzlz5afN2M8sv.I9h1LBOYq0H34pp/tI7X9aIzQB4XQRS'),
-('204', '204', 'ingeniero civil', '$2y$10$klnjh.S7NnRa3b74/y6v9e0kVnqHiJYXR4Hj7dR/ODJX7MrF7hkR.');
+('200', '200', 'administrador', '$2y$10$.Mrh4FEfZy3ZRKSX3E4eru8f7IUgyDK7jrbJo0KmK17B2HUMmm5Pq'),
+('201', '201', 'administrador', '$2y$10$gMeX5nnHFs8IMC2tqnhI.OdQw9jmqwgNyBZXxOXIp3wpPU.p/3CzS');
 
 -- --------------------------------------------------------
 
@@ -174,10 +167,8 @@ CREATE TABLE `estudiante` (
 --
 
 INSERT INTO `estudiante` (`CodigoEstudiante`, `Cedula`, `Programa`, `Password`) VALUES
-('100', '100', 'sistemas', '$2y$10$23DfcfEAycnl6o3H7hUJaesgB1c3PaPccgpaTaWvLBqYFGKzsAg9q'),
-('101', '101', 'administracion', '$2y$10$Rcw08CTM/RRV1rX1549D1OP2fXw0IUh7eKH9TYbySCO.KRD.eLvBO'),
-('102', '102', 'sistemas', '$2y$10$fB7blzovV1ib9.DTwgG5Lun1TMAOdezZwWgpUFxmkmUlZbJCeg1u6'),
-('103', '103', 'IngenierÃ­a de Sistemas', '$2y$10$3aiy1pLOn0V6CDNVXYjcPOIr18wqIP/Zor7HpcUiTDkleducrW.D6');
+('100', '100', 'IngenierÃ­a de Sistemas', '$2y$10$C6EiggdLz84W1o3XFeLOBOLpmzbPEaR//BYklCZiRhjm2O8XWK2iy'),
+('101', '101', 'sistemas', '$2y$10$yv5v3gM2UrB/RYZGpb2J8.iflMBsUrwzS.Fhc2ihUQM0TW0wCGpH.');
 
 -- --------------------------------------------------------
 
@@ -196,9 +187,8 @@ CREATE TABLE `numeroasesorias` (
 --
 
 INSERT INTO `numeroasesorias` (`idNumero`, `CodigoDocente`, `Cantidad`) VALUES
-(1, '201', 1),
-(2, '202', 1),
-(3, '203', 1);
+(2, '201', 0),
+(3, '200', 2);
 
 -- --------------------------------------------------------
 
@@ -217,9 +207,8 @@ CREATE TABLE `numerojurados` (
 --
 
 INSERT INTO `numerojurados` (`idNumeroJ`, `CodigoDocente`, `Cantidad`) VALUES
-(1, '204', 2),
-(2, '203', 0),
-(3, '202', 1);
+(2, '201', 1),
+(3, '200', 1);
 
 -- --------------------------------------------------------
 
@@ -242,15 +231,11 @@ CREATE TABLE `persona` (
 --
 
 INSERT INTO `persona` (`Cedula`, `Nombres`, `Apellidos`, `Correo`, `Telefono`, `Direccion`, `Ciudad`) VALUES
-('000', 'luis', 'lopez', 'lucho@gmail.com', '3165584505', 'mz G casa 10', 'ipiales'),
-('100', 'eduardo', 'lopez', 'aux@gmail.com', '222', '4', 'ipiales'),
-('101', 'eduardo', 'Pacheco', 'lucho@gmail.com', '999', 'mz G casa 10', 'ipiales'),
-('102', 'miguel', 'Pacheco', 'lucho@gmail.com', '999', 'mz G casa 10', 'ipiales'),
-('103', 'luis', 'aux', 'edu@gmail.com', '123', 'mz g casa 10', 'Carlosama'),
-('201', 'eduardo', 'rosero', 'aux@gmail.com', '3165584505', 'sandona', 'Carlosama'),
-('202', 'Luis Eduardo', 'Pacheco', 'aux@gmail.com', '111', '4', 'pasto'),
-('203', 'luis', 'rosero', 'edu@gmail.com', '3165584505', '888', 'Carlosama'),
-('204', 'luis', 'Insuasty Portillo', 'aux@gmail.com', '3165584505', '4', 'ipiales');
+('000', 'Luis Eduardo', 'Lopez Rosero', 'lucho@gmail.com', '3165584505', 'mz G casa 10', 'ipiales'),
+('100', 'Miguel Angel', 'Aux Martinez', 'aux@gmail.com', '3165584505', 'mz G casa 10', 'Carlosama'),
+('101', 'Diego', 'Pacheco', 'diego@gmail.com', '11552', 'villanueva', 'pasto'),
+('200', 'Edison Vicente', 'Insuasty Portillo', 'edu@gmail.com', '3165584505', 'villanueva', 'Yacuanquer'),
+('201', 'Diego', 'Pacheco', 'diego@gmail.com', '123', 'mz G casa 10', 'Yacuanquer');
 
 -- --------------------------------------------------------
 
@@ -270,10 +255,8 @@ CREATE TABLE `trabajo` (
 --
 
 INSERT INTO `trabajo` (`idTrabajo`, `CodigoEstudiante`, `NombreTrabajo`, `Ubicacion`) VALUES
-(1, '100', 'trabajo1', 'archivo/trabajo1.pdf'),
-(3, '102', 'trabajo3', 'archivo/trabajo3.pdf'),
-(4, '103', 'trabajo4', 'archivo/trabajo4.pdf'),
-(5, '101', 'trabajo2', 'archivo/trabajo2.pdf');
+(1, '100', 'trabajo11', 'archivo/trabajo11.pdf'),
+(2, '101', 'trabajo2', 'archivo/trabajo2.pdf');
 
 --
 -- Índices para tablas volcadas
@@ -367,25 +350,25 @@ ALTER TABLE `trabajo`
 -- AUTO_INCREMENT de la tabla `asignaasesor`
 --
 ALTER TABLE `asignaasesor`
-  MODIFY `idAsesor` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idAsesor` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `asignajurado`
 --
 ALTER TABLE `asignajurado`
-  MODIFY `idJurado` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idJurado` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `calificacion`
 --
 ALTER TABLE `calificacion`
-  MODIFY `idCalificacion` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idCalificacion` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `comentario`
 --
 ALTER TABLE `comentario`
-  MODIFY `idComentario` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idComentario` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `numeroasesorias`
@@ -403,7 +386,7 @@ ALTER TABLE `numerojurados`
 -- AUTO_INCREMENT de la tabla `trabajo`
 --
 ALTER TABLE `trabajo`
-  MODIFY `idTrabajo` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `idTrabajo` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Restricciones para tablas volcadas
