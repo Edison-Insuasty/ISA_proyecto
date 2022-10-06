@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro</title>	
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body>
+      <br>
+      <div class="row h-100 justify-content-center align-items-center ">
+            <div class="card col-10 border-black" style="background-color: #F0F2EE;" >
+                  <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example  p-3 rounded-2 text-black" tabindex="0">
+                        <div class="card-group" align="center">
+                              <div class="card bg-transparent " style="width: 18rem;">
+                                    <div class="card-body">
+                                          <div class="alert alert-success border-dark text-black" role="alert">
+                                                REGISTRO
+                                          </div>
+                                          <form class="row g-3" name="nuevo administrador" method="POST" action="php/ConexionCrearUsuarioAdministrador.php">
+                                                <table class="table table-success table-striped">
+                                                      <tr align="center" valign="middle">
+                                                            <td>
+                                                                  Cedula:
+                                                            </td>
+                                                            <td>
+                                                                  <input type="number" name="cedula" placeholder="Cedula" class="form-control" id="validationDefault01" required>
+                                                            </td>
+                                                            <td>
+                                                                  Nombres:
+                                                            </td>
+                                                            <td>
+                                                                  <input type="text" name="nombre" placeholder="Nombres" class="form-control" id="validationDefault01" required>
+                                                            </td>
+                                                            <td>
+                                                                  Apellidos:
+                                                            </td>
+                                                            <td>
+                                                                  <input type="text" name="apellidos" placeholder="Apellidos" class="form-control" id="validationDefault02" required>
+                                                            </td>
+                                                      </tr>
+                                                      <tr align="center" valign="middle">
+                                                            <td>
+                                                                  Codigo:
+                                                            </td>
+                                                            <td>
+                                                                  <input type="text" name="codigoadministrador" placeholder="Codigo" class="form-control" id="validationDefault05" required>
+                                                            </td>
+                                                            <td>
+                                                                  Correo:
+                                                            </td>
+                                                            <td>
+                                                                  <div class="input-group">
+                                                                        <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                                                                        <input type="email" name="correo" placeholder="Email" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+                                                                  </div>
+                                                            </td>
+                                                            <td>
+                                                                  Telefono:
+                                                            </td>
+                                                            <td>
+                                                                  <input type="phone" name="telefono" placeholder="Telefono" class="form-control" id="validationDefault05" required>
+                                                            </td>
+                                                      </tr>
+                                                      <tr align="center" valign="middle">
+                                                            <td>
+                                                                  Direccion:
+                                                            </td>
+                                                            <td>
+                                                                  <input type="text" name="direccion" placeholder="Direccion" class="form-control" id="validationDefault05" required>
+                                                            </td>
+                                                            <td>
+                                                                  Ciudad:
+                                                            </td>
+                                                            <td>
+                                                                  <input type="text" name="ciudad" placeholder="Ciudad" class="form-control" id="validationDefault05" required>
+                                                            </td>
+                                                            <td>
+                                                                  Credencial:
+                                                            </td>
+                                                            <td>
+                                                                  <input type="password" name="credencial" placeholder="Credencial" class="form-control" id="validationDefault05" required>
+                                                            </td>
+                                                      </tr>
+                                                      <tr align="center" valign="middle">
+                                                            <td>
+                                                                  Cargo:
+                                                            </td>
+                                                            <td>
+                                                                  <input type="text" name="cargo" placeholder="Cargo" class="form-control" id="validationDefault05" required>
+                                                            </td>
+                                                            <td>
+                                                                  Contraseña:
+                                                            </td>
+                                                            <td>
+                                                                  <input type="password" name="contraseña" autocomplete="new-password" placeholder="Contraseña" class="form-control" id="validationDefault05" required>
+                                                            </td>
+                                                            <td>
+                                                                  Repite Contraseña:
+                                                            </td>
+                                                            <td>
+                                                                  <input type="password" name="repitecontraseña" autocomplete="new-password" placeholder="Contraseña" class="form-control" id="validationDefault05" required>
+                                                            </td>
+                                                      </tr>
+                                                      <tr align="center" valign="middle">
+                                                            <td colspan="6">
+                                                                  <button class="btn btn-success border-dark" type="submit" name="enviar">Aceptar</button>
+                                                            </td>
+                                                      </tr>
+                                                </table>	
+                                          </form>
+                                    </div>
+                              </div>
+                        </div>
+                        <br>
+                        <table align="center">
+                              <td>
+                                   <a href="index.html" class="btn btn-danger border-dark text-white">Volver</a>
+                                   <a href="inicio.html" class="btn btn-danger border-dark text-white">Iniciar Sesión</a> 
+                              </td>
+                        </table>
+                  </div>
+            </div>
+      </div>
+      <br>		
+</body>
+</html>
