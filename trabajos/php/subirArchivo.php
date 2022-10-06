@@ -47,5 +47,7 @@
 			echo '<script language="javascript">alert("Ya registro su proyecto.");window.location.href="../perfilestudiante.php"</script>';
 		}
 	}	
+
 	mysqli_close($conexion);
+	
 ?>
