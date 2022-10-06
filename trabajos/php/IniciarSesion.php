@@ -7,45 +7,27 @@
 	$codigo   = $_POST["codigo"];
 	$password = $_POST["contraseña"];
 	
-	$consulta = "SELECT *
-				 FROM administrador
-				 WHERE CodigoAdministrador = '$codigo' ";
+	$consulta = "SELECT * FROM administrador WHERE CodigoAdministrador = '$codigo' ";
 	$consulta = mysqli_query($conexion, $consulta);
 	$consulta = mysqli_fetch_array($consulta);
 	
-	$consulta1 = "SELECT *
-				 FROM persona
-				 WHERE Cedula = (SELECT Cedula
-				 FROM administrador
-				 WHERE CodigoAdministrador = '$codigo') ";
+	$consulta1 = "SELECT * FROM persona WHERE Cedula = (SELECT Cedula FROM administrador WHERE CodigoAdministrador='$codigo')";
 	$consulta1 = mysqli_query($conexion, $consulta1);
 	$consulta1 = mysqli_fetch_array($consulta1);
 
-	$consulta2 = "SELECT *
-				 FROM estudiante
-				 WHERE CodigoEstudiante = '$codigo' ";
+	$consulta2 = "SELECT * FROM estudiante WHERE CodigoEstudiante = '$codigo' ";
 	$consulta2 = mysqli_query($conexion, $consulta2);
 	$consulta2 = mysqli_fetch_array($consulta2);
 	
-	$consulta3 = "SELECT *
-				 FROM persona
-				 WHERE Cedula = (SELECT Cedula
-				 FROM estudiante
-				 WHERE CodigoEstudiante = '$codigo') ";
+	$consulta3 = "SELECT * FROM persona WHERE Cedula = (SELECT Cedula FROM estudiante WHERE CodigoEstudiante = '$codigo') ";
 	$consulta3 = mysqli_query($conexion, $consulta3);
 	$consulta3 = mysqli_fetch_array($consulta3);
 
-	$consulta4 = "SELECT *
-				 FROM docente
-				 WHERE CodigoDocente = '$codigo' ";
+	$consulta4 = "SELECT * FROM docente WHERE CodigoDocente = '$codigo' ";
 	$consulta4 = mysqli_query($conexion, $consulta4);
 	$consulta4 = mysqli_fetch_array($consulta4);
 	
-	$consulta5 = "SELECT *
-				 FROM persona
-				 WHERE Cedula = (SELECT Cedula
-				 FROM docente
-				 WHERE CodigoDocente = '$codigo') ";
+	$consulta5 = "SELECT * FROM persona WHERE Cedula = (SELECT Cedula FROM docente WHERE CodigoDocente = '$codigo') ";
 	$consulta5 = mysqli_query($conexion, $consulta5);
 	$consulta5 = mysqli_fetch_array($consulta5);
 
