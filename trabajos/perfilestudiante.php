@@ -26,6 +26,12 @@ include("php/validarSesion.php");
     <li class="nav-item">
       <a class="nav-link text-white" href="php/CerrarSesion.php">Cerrar Sesión</a>
     </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Requisitos</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="https://secretariageneral.udenar.edu.co/?wpfb_dl=3350#:~:text=Los%20trabajos%20de%20grado%20en,%25%20y%2040%25%2C%20respectivamente." target="_blank">Ver</a></li>
+      </ul>
+  </li>
   </ul>
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
@@ -112,9 +118,6 @@ include("php/validarSesion.php");
                                 <td>
                                   <?php echo $cedula; ?>
                                 </td>
-                                <td>
-                                  <img src="img/visto.png" class="img-fluid rounded-start" width="50">
-                                </td>
                               </tr>
                               <tr align="center">
                                 <td>
@@ -122,9 +125,6 @@ include("php/validarSesion.php");
                                 </td>
                                 <td>
                                   <?php echo $cestudiante; ?>
-                                </td>
-                                <td>
-                                  <img src="img/visto.png" class="img-fluid rounded-start" width="50">
                                 </td>
                               </tr>
                               <tr align="center">
@@ -134,9 +134,6 @@ include("php/validarSesion.php");
                                 <td>
                                   <?php echo $programa; ?>
                                 </td>
-                                <td>
-                                  <img src="img/visto.png" class="img-fluid rounded-start" width="50">
-                                </td>
                               </tr>
                               <tr align="center">
                                 <td>
@@ -144,9 +141,6 @@ include("php/validarSesion.php");
                                 </td>
                                 <td>
                                   <?php echo $nombres; ?>
-                                </td>
-                                <td>
-                                  <img src="img/visto.png" class="img-fluid rounded-start" width="50">
                                 </td>
                               </tr>
                               <tr align="center">
@@ -156,9 +150,6 @@ include("php/validarSesion.php");
                                 <td>
                                   <?php echo $apellidos; ?>
                                 </td>
-                                <td>
-                                  <img src="img/visto.png" class="img-fluid rounded-start" width="50">
-                                </td>
                               </tr>
                               <tr align="center">
                                 <td>
@@ -166,9 +157,6 @@ include("php/validarSesion.php");
                                 </td>
                                 <td>
                                   <?php echo $telefono; ?>
-                                </td>
-                                <td>
-                                  <img src="img/visto.png" class="img-fluid rounded-start" width="50">
                                 </td>
                               </tr>
                               <tr align="center">
@@ -178,9 +166,6 @@ include("php/validarSesion.php");
                                 <td>
                                   <?php echo $ciudad; ?>
                                 </td>
-                                <td>
-                                  <img src="img/visto.png" class="img-fluid rounded-start" width="50">
-                                </td>
                               </tr>
                               <tr align="center">
                                 <td>
@@ -189,9 +174,6 @@ include("php/validarSesion.php");
                                 <td>
                                   <?php echo $direccion; ?>
                                 </td>
-                                <td>
-                                  <img src="img/visto.png" class="img-fluid rounded-start" width="50">
-                                </td>
                               </tr>
                               <tr align="center">
                                 <td>
@@ -199,9 +181,6 @@ include("php/validarSesion.php");
                                 </td>
                                 <td>
                                   <?php echo $correo; ?>
-                                </td>
-                                <td>
-                                  <img src="img/visto.png" class="img-fluid rounded-start" width="50">
                                 </td>
                               </tr>
                             </table>
@@ -340,47 +319,6 @@ include("php/validarSesion.php");
         <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-transparent p-3 rounded-2" tabindex="0">
           <h4 id="scrollspyHeading2" align="center"><b><i>TRABAJO</i></b></h4>
           <p>       
-            <div class="card-group" align="center">
-              <div class="card bg-transparent " style="width: 18rem;">
-                <h4><i><b>REQUISITOS</b></i></h4>
-                <table align="center">
-                  <td>
-                    <div class="card" style="width: 18rem;">
-                      <img src="img/graduacion.jpg" class="card-img-top " alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title" align="center">¿Desea visualizar los requisitos del trabajo de grado?</h5>
-                      </div>
-                      <div class="card-body" align="center">
-                        <a href="https://secretariageneral.udenar.edu.co/?wpfb_dl=3350#:~:text=Los%20trabajos%20de%20grado%20en,%25%20y%2040%25%2C%20respectivamente." target="_blank" class="btn btn-success border-dark card-link" ><i>SI</i></a>
-                      </div>
-                    </div>
-                  </td>
-                </table> 
-              </div>
-              <div class="card  bg-transparent" style="width: 18rem;">
-                <div class="card-body">
-                  <h4><i><b>ADJUNTAR</b></i></h4>
-                  <div class="card-body">
-                    <form class="row g-3" name="nuevo archivo" method="POST" action="php/subirArchivo.php" enctype="multipart/form-data">
-                      <div class="col-12">
-                        <label for="validationDefault01" class="form-label"><b>Nombre</b></label>
-                        <input type="text" name="nombreproyecto" placeholder="Ingrese nombre del Trabajo" class="form-control" id="validationDefault01" required>
-                      </div>
-                      <div class="col-12">
-                        <label for="validationDefault01" class="form-label"><b>Subir Proyecto</b></label>
-                        <input type="file" class="form-control" id="archivo" name="archivo" accept=".pdf">
-                      </div>
-                      <div class="col-12">
-                        <button class="btn btn-success border-dark" type="submit" name="enviar">Adjuntar</button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>  
-          </p>
-          <h4 id="scrollspyHeading3" align="center"><b><i></i></b></h4>
-          <p>
             <div class="card-group" align="center">
               <div class="card bg-transparent " style="width: 18rem;">
                 <div class="card-body">
@@ -648,10 +586,35 @@ include("php/validarSesion.php");
                         </tr>
                         <?php
                       }
-                      
                     }
                     ?>
                   </table>
+                </div>
+              </div>
+            </div>  
+          </p>
+          <h4 id="scrollspyHeading3" align="center"><b><i></i></b></h4>
+          <p>
+            <div class="card-group" align="center">
+              <div class="card  bg-transparent" style="width: 18rem;">
+                <div class="card-body">
+                  <br>
+                  <h4><i><b>ADJUNTAR</b></i></h4>
+                  <div class="card-body">
+                    <form class="row g-3" name="nuevo archivo" method="POST" action="php/subirArchivo.php" enctype="multipart/form-data">
+                      <div class="col-12">
+                        <label for="validationDefault01" class="form-label"><b>Nombre</b></label>
+                        <input type="text" name="nombreproyecto" placeholder="Ingrese nombre del Trabajo" class="form-control" id="validationDefault01" required>
+                      </div>
+                      <div class="col-12">
+                        <label for="validationDefault01" class="form-label"><b>Subir Proyecto</b></label>
+                        <input type="file" class="form-control" id="archivo" name="archivo" accept=".pdf">
+                      </div>
+                      <div class="col-12">
+                        <button class="btn btn-success border-dark" type="submit" name="enviar">Adjuntar</button>
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
               <div class="card bg-transparent" style="width: 18rem;">
@@ -759,9 +722,6 @@ include("php/validarSesion.php");
                     <td>
                       <?php echo $cod; ?>
                     </td>
-                    <td>
-                      <img src="img/visto.png" class="img-fluid rounded-start" width="50">
-                    </td>
                   </tr>
                   <tr align="center">
                     <td>
@@ -769,9 +729,6 @@ include("php/validarSesion.php");
                     </td>
                     <td>
                       <?php echo $nom; ?>
-                    </td>
-                    <td>
-                      <img src="img/visto.png" class="img-fluid rounded-start" width="50">
                     </td>
                   </tr>
                   <tr align="center">
@@ -781,9 +738,6 @@ include("php/validarSesion.php");
                     <td>
                       <?php echo $ape; ?>
                     </td>
-                    <td>
-                      <img src="img/visto.png" class="img-fluid rounded-start" width="50">
-                    </td>
                   </tr>
                   <tr align="center">
                     <td>
@@ -791,9 +745,6 @@ include("php/validarSesion.php");
                     </td>
                     <td>
                       <?php echo $esp; ?>
-                    </td>
-                    <td>
-                      <img src="img/visto.png" class="img-fluid rounded-start" width="50">
                     </td>
                   </tr>
                   <tr align="center">
@@ -803,9 +754,6 @@ include("php/validarSesion.php");
                     <td>
                       <?php echo $cor; ?>
                     </td>
-                    <td>
-                      <img src="img/visto.png" class="img-fluid rounded-start" width="50">
-                    </td>
                   </tr>
                   <tr align="center">
                     <td>
@@ -813,9 +761,6 @@ include("php/validarSesion.php");
                     </td>
                     <td>
                       <?php echo $tel; ?>
-                    </td>
-                    <td>
-                      <img src="img/visto.png" class="img-fluid rounded-start" width="50">
                     </td>
                   </tr>
                 </table>
@@ -881,9 +826,6 @@ include("php/validarSesion.php");
                     <td>
                       <?php echo $cod; ?>
                     </td>
-                    <td>
-                      <img src="img/visto.png" class="img-fluid rounded-start" width="50">
-                    </td>
                   </tr>
                   <tr align="center">
                     <td>
@@ -891,9 +833,6 @@ include("php/validarSesion.php");
                     </td>
                     <td>
                       <?php echo $nom; ?>
-                    </td>
-                    <td>
-                      <img src="img/visto.png" class="img-fluid rounded-start" width="50">
                     </td>
                   </tr>
                   <tr align="center">
@@ -903,9 +842,6 @@ include("php/validarSesion.php");
                     <td>
                       <?php echo $ape; ?>
                     </td>
-                    <td>
-                      <img src="img/visto.png" class="img-fluid rounded-start" width="50">
-                    </td>
                   </tr>
                   <tr align="center">
                     <td>
@@ -913,9 +849,6 @@ include("php/validarSesion.php");
                     </td>
                     <td>
                       <?php echo $esp; ?>
-                    </td>
-                    <td>
-                      <img src="img/visto.png" class="img-fluid rounded-start" width="50">
                     </td>
                   </tr>
                   <tr align="center">
@@ -925,9 +858,6 @@ include("php/validarSesion.php");
                     <td>
                       <?php echo $cor; ?>
                     </td>
-                    <td>
-                      <img src="img/visto.png" class="img-fluid rounded-start" width="50">
-                    </td>
                   </tr>
                   <tr align="center">
                     <td>
@@ -935,9 +865,6 @@ include("php/validarSesion.php");
                     </td>
                     <td>
                       <?php echo $tel; ?>
-                    </td>
-                    <td>
-                      <img src="img/visto.png" class="img-fluid rounded-start" width="50">
                     </td>
                   </tr>
                 </table>
