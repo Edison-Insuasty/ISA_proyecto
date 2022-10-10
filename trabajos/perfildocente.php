@@ -109,9 +109,6 @@ include("php/validarSesion.php");
                                   <td>
                                     <?php echo $cedula; ?>
                                   </td>
-                                  <td>
-                                    <img src="img/visto.png" class="img-fluid rounded-start" width="50">
-                                  </td>
                                 </tr>
                                 <tr align="center">
                                   <td>
@@ -119,9 +116,6 @@ include("php/validarSesion.php");
                                   </td>
                                   <td>
                                     <?php echo $cdocente; ?>
-                                  </td>
-                                  <td>
-                                    <img src="img/visto.png" class="img-fluid rounded-start" width="50">
                                   </td>
                                 </tr>
                                 <tr align="center">
@@ -131,9 +125,6 @@ include("php/validarSesion.php");
                                   <td>
                                     <?php echo $especializacion; ?>
                                   </td>
-                                  <td>
-                                    <img src="img/visto.png" class="img-fluid rounded-start" width="50">
-                                  </td>
                                 </tr>
                                 <tr align="center">
                                   <td>
@@ -141,9 +132,6 @@ include("php/validarSesion.php");
                                   </td>
                                   <td>
                                     <?php echo $nombres; ?>
-                                  </td>
-                                  <td>
-                                    <img src="img/visto.png" class="img-fluid rounded-start" width="50">
                                   </td>
                                 </tr>
                                 <tr align="center">
@@ -153,9 +141,6 @@ include("php/validarSesion.php");
                                   <td>
                                     <?php echo $apellidos; ?>
                                   </td>
-                                  <td>
-                                    <img src="img/visto.png" class="img-fluid rounded-start" width="50">
-                                  </td>
                                 </tr>
                                 <tr align="center">
                                   <td>
@@ -163,9 +148,6 @@ include("php/validarSesion.php");
                                   </td>
                                   <td>
                                     <?php echo $telefono; ?>
-                                  </td>
-                                  <td>
-                                    <img src="img/visto.png" class="img-fluid rounded-start" width="50">
                                   </td>
                                 </tr>
                                 <tr align="center">
@@ -175,9 +157,6 @@ include("php/validarSesion.php");
                                   <td>
                                     <?php echo $ciudad; ?>
                                   </td>
-                                  <td>
-                                    <img src="img/visto.png" class="img-fluid rounded-start" width="50">
-                                  </td>
                                 </tr>
                                 <tr align="center">
                                   <td>
@@ -186,9 +165,6 @@ include("php/validarSesion.php");
                                   <td>
                                     <?php echo $direccion; ?>
                                   </td>
-                                  <td>
-                                    <img src="img/visto.png" class="img-fluid rounded-start" width="50">
-                                  </td>
                                 </tr>
                                 <tr align="center">
                                   <td>
@@ -196,9 +172,6 @@ include("php/validarSesion.php");
                                   </td>
                                   <td>
                                     <?php echo $correo; ?>
-                                  </td>
-                                  <td>
-                                    <img src="img/visto.png" class="img-fluid rounded-start" width="50">
                                   </td>
                                 </tr>
                               </table>
@@ -510,20 +483,17 @@ include("php/validarSesion.php");
                                        <form class="row g-3" name="calificar" method="POST" action="php/Calificar.php">
                                         <table class="table">
                                           <tr align="center">
-                                            <td>
-                                              <b>ID</b>
-                                            </td>
                                             <td rowspan="2" valign="bottom">
                                               <input type="number" name="nota" placeholder="Nota" class="form-control" id="validationDefault05" min="0" max="50" required>
                                             </td>
                                           </tr>
                                           <tr align="center">
                                             <td>
-                                              <input type="text" name="idtrabajo2" placeholder=" <?php echo $idtrabajo; ?> " class="form-control" id="validationDefault05" readonly value=" <?php echo $idtrabajo; ?> ">
+                                              <input type="hidden" name="idtrabajo2" placeholder=" <?php echo $idtrabajo; ?> " class="form-control" id="validationDefault05" readonly value=" <?php echo $idtrabajo; ?> ">
                                             </td>
                                           </tr>
                                           <tr align="center">
-                                            <td colspan="3">
+                                            <td>
                                               <button class="btn btn-success border-dark" type="submit" name="enviar">Enviar</button>
                                             </td>
                                           </tr>
@@ -545,20 +515,17 @@ include("php/validarSesion.php");
                                       <form class="row g-3" name="comentar" method="POST" action="php/Comentar.php">
                                         <table class="table">
                                           <tr align="center">
-                                            <td>
-                                              <b>ID</b>
-                                            </td>
                                             <td rowspan="2" valign="bottom">
-                                              <input type="text" name="comentar" placeholder="cometario" class="form-control" id="validationDefault05" required>
+                                              <input type="text" name="comentar" placeholder="Cometario" class="form-control" id="validationDefault05" required>
                                             </td>
                                           </tr>
                                           <tr align="center">
                                             <td>
-                                              <input type="text" name="idtrabajo1" placeholder=" <?php echo $idtrabajo; ?> " class="form-control" id="validationDefault05" readonly value=" <?php echo $idtrabajo ?> " >
+                                              <input type="hidden" name="idtrabajo1" placeholder=" <?php echo $idtrabajo; ?> " class="form-control" id="validationDefault05" readonly value=" <?php echo $idtrabajo ?> " >
                                             </td>
                                           </tr>
                                           <tr align="center">
-                                            <td colspan="2">
+                                            <td>
                                               <button class="btn btn-success border-dark" type="submit" name="enviar">Enviar</button>
                                             </td>
                                           </tr>
