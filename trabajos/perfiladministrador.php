@@ -119,9 +119,6 @@ include("php/validarSesion.php");
                                   <td>
                                     <?php echo $cedula; ?>
                                   </td>
-                                  <td>
-                                    <img src="img/visto.png" class="img-fluid rounded-start" width="50">
-                                  </td>
                                 </tr>
                                 <tr align="center">
                                   <td>
@@ -129,9 +126,6 @@ include("php/validarSesion.php");
                                   </td>
                                   <td>
                                     <?php echo $cadministrador; ?>
-                                  </td>
-                                  <td>
-                                    <img src="img/visto.png" class="img-fluid rounded-start" width="50">
                                   </td>
                                 </tr>
                                 <tr align="center">
@@ -141,9 +135,6 @@ include("php/validarSesion.php");
                                   <td>
                                     <?php echo $credencial; ?>
                                   </td>
-                                  <td>
-                                    <img src="img/visto.png" class="img-fluid rounded-start" width="50">
-                                  </td>
                                 </tr>
                                 <tr align="center">
                                   <td>
@@ -151,9 +142,6 @@ include("php/validarSesion.php");
                                   </td>
                                   <td>
                                     <?php echo $nombres; ?>
-                                  </td>
-                                  <td>
-                                    <img src="img/visto.png" class="img-fluid rounded-start" width="50">
                                   </td>
                                 </tr>
                                 <tr align="center">
@@ -163,9 +151,6 @@ include("php/validarSesion.php");
                                   <td>
                                     <?php echo $apellidos; ?>
                                   </td>
-                                  <td>
-                                    <img src="img/visto.png" class="img-fluid rounded-start" width="50">
-                                  </td>
                                 </tr>
                                 <tr align="center">
                                   <td>
@@ -173,9 +158,6 @@ include("php/validarSesion.php");
                                   </td>
                                   <td>
                                     <?php echo $telefono; ?>
-                                  </td>
-                                  <td>
-                                    <img src="img/visto.png" class="img-fluid rounded-start" width="50">
                                   </td>
                                 </tr>
                                 <tr align="center">
@@ -185,9 +167,6 @@ include("php/validarSesion.php");
                                   <td>
                                     <?php echo $ciudad; ?>
                                   </td>
-                                  <td>
-                                    <img src="img/visto.png" class="img-fluid rounded-start" width="50">
-                                  </td>
                                 </tr>
                                 <tr align="center">
                                   <td>
@@ -195,9 +174,6 @@ include("php/validarSesion.php");
                                   </td>
                                   <td>
                                     <?php echo $direccion; ?>
-                                  </td>
-                                  <td>
-                                    <img src="img/visto.png" class="img-fluid rounded-start" width="50">
                                   </td>
                                 </tr>
                                 <tr align="center">
@@ -207,9 +183,6 @@ include("php/validarSesion.php");
                                   <td>
                                     <?php echo $cargo; ?>
                                   </td>
-                                  <td>
-                                    <img src="img/visto.png" class="img-fluid rounded-start" width="50">
-                                  </td>
                                 </tr>
                                 <tr align="center">
                                   <td>
@@ -217,9 +190,6 @@ include("php/validarSesion.php");
                                   </td>
                                   <td>
                                     <?php echo $correo; ?>
-                                  </td>
-                                  <td>
-                                    <img src="img/visto.png" class="img-fluid rounded-start" width="50">
                                   </td>
                                 </tr>
                               </table>
